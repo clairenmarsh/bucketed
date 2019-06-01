@@ -20,6 +20,8 @@ class Activity < ApplicationRecord
 
   validates :activity_type, :inclusion => { :in => [ 'Eat', 'Drink', 'Play' ]  }
 
+  validates :priority, :inclusion => { :in => [ 'High', 'Medium', 'Low' ]  }
+
   validates :status, :inclusion => { :in => [ 'Want to do', 'Done', 'Deleted' ]  }
 
 end

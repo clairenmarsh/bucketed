@@ -8,7 +8,7 @@ RSpec.describe User, type: :model do
 
     it { should belong_to(:photo) }
 
-    it { should have_many(:followers2) }
+    it { should have_many(:followees) }
 
     it { should have_many(:followers) }
 

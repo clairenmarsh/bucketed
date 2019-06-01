@@ -8,6 +8,8 @@ class CreateActivities < ActiveRecord::Migration[5.1]
       t.integer :photo_id
       t.integer :location_id
       t.string :status
+      t.string :details
+      t.string :priority
 
       t.timestamps
     end

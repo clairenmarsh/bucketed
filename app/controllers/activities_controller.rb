@@ -30,6 +30,8 @@ class ActivitiesController < ApplicationController
     @activity.photo_id = params.fetch("photo_id")
     @activity.location_id = params.fetch("location_id")
     @activity.status = params.fetch("status")
+    @activity.details = params.fetch("details")
+    @activity.priority = params.fetch("priority")
 
     if @activity.valid?
       @activity.save
@@ -50,6 +52,8 @@ class ActivitiesController < ApplicationController
     @activity.photo_id = params.fetch("photo_id")
     @activity.location_id = params.fetch("location_id")
     @activity.status = params.fetch("status")
+    @activity.details = params.fetch("details")
+    @activity.priority = params.fetch("priority")
 
     if @activity.valid?
       @activity.save
@@ -70,6 +74,8 @@ class ActivitiesController < ApplicationController
     @activity.photo_id = params.fetch("photo_id")
     @activity.location_id = params.fetch("location_id")
     @activity.status = params.fetch("status")
+    @activity.details = params.fetch("details")
+    @activity.priority = params.fetch("priority")
 
     if @activity.valid?
       @activity.save
@@ -90,6 +96,8 @@ class ActivitiesController < ApplicationController
     @activity.photo_id = params.fetch("photo_id")
     @activity.location_id = params.fetch("location_id")
     @activity.status = params.fetch("status")
+    @activity.details = params.fetch("details")
+    @activity.priority = params.fetch("priority")
 
     if @activity.valid?
       @activity.save
@@ -116,6 +124,8 @@ class ActivitiesController < ApplicationController
     @activity.photo_id = params.fetch("photo_id")
     @activity.location_id = params.fetch("location_id")
     @activity.status = params.fetch("status")
+    @activity.details = params.fetch("details")
+    @activity.priority = params.fetch("priority")
 
     if @activity.valid?
       @activity.save
