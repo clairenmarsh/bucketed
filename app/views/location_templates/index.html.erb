@@ -98,7 +98,11 @@
 
         <!-- Display location.created_by_user_id start -->
         <td>
-          <%= location.user.username %>
+          <% if location.user.present? %>
+            <a href="/users/<%= location.user.id %>">
+              <%= location.user.username %>
+            </a>
+          <% end %>
         </td>
         <!-- Display location.created_by_user_id end -->
 

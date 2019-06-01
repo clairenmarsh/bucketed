@@ -66,13 +66,21 @@
 
         <!-- Display bucket.location_id start -->
         <td>
-          <%= bucket.location.city_name %>
+          <% if bucket.location.present? %>
+            <a href="/locations/<%= bucket.location.id %>">
+              <%= bucket.location.city_name %>
+            </a>
+          <% end %>
         </td>
         <!-- Display bucket.location_id end -->
 
         <!-- Display bucket.user_id start -->
         <td>
-          <%= bucket.user.username %>
+          <% if bucket.user.present? %>
+            <a href="/users/<%= bucket.user.id %>">
+              <%= bucket.user.username %>
+            </a>
+          <% end %>
         </td>
         <!-- Display bucket.user_id end -->
 
@@ -84,7 +92,11 @@
 
         <!-- Display bucket.photo_id start -->
         <td>
-          <%= bucket.photo.created_at %>
+          <% if bucket.photo.present? %>
+            <a href="/photos/<%= bucket.photo.id %>">
+              <%= bucket.photo.created_at %>
+            </a>
+          <% end %>
         </td>
         <!-- Display bucket.photo_id end -->
 

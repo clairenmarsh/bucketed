@@ -58,13 +58,21 @@
 
         <!-- Display follower.follower_user_id start -->
         <td>
-          <%= follower.follower_user.username %>
+          <% if follower.follower_user.present? %>
+            <a href="/users/<%= follower.follower_user.id %>">
+              <%= follower.follower_user.username %>
+            </a>
+          <% end %>
         </td>
         <!-- Display follower.follower_user_id end -->
 
         <!-- Display follower.folowee_user_id start -->
         <td>
-          <%= follower.folowee_user.username %>
+          <% if follower.folowee_user.present? %>
+            <a href="/users/<%= follower.folowee_user.id %>">
+              <%= follower.folowee_user.username %>
+            </a>
+          <% end %>
         </td>
         <!-- Display follower.folowee_user_id end -->
 

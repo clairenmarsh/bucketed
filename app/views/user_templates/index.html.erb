@@ -88,13 +88,21 @@
 
         <!-- Display user.photo_id start -->
         <td>
-          <%= user.photo.created_at %>
+          <% if user.photo.present? %>
+            <a href="/photos/<%= user.photo.id %>">
+              <%= user.photo.created_at %>
+            </a>
+          <% end %>
         </td>
         <!-- Display user.photo_id end -->
 
         <!-- Display user.location_id start -->
         <td>
-          <%= user.location.city_name %>
+          <% if user.location.present? %>
+            <a href="/locations/<%= user.location.id %>">
+              <%= user.location.city_name %>
+            </a>
+          <% end %>
         </td>
         <!-- Display user.location_id end -->
 

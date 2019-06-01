@@ -43,7 +43,11 @@
       </dt>
       <!-- Display poster_id start -->
       <dd>
-        <%= @comment.poster_id %>
+        <% if @comment.poster.present? %>
+          <a href="/users/<%= @comment.poster_id %>">
+            <%= @comment.poster.username %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display poster_id end -->
 
@@ -52,7 +56,11 @@
       </dt>
       <!-- Display activity_id start -->
       <dd>
-        <%= @comment.activity_id %>
+        <% if @comment.activity.present? %>
+          <a href="/activities/<%= @comment.activity_id %>">
+            <%= @comment.activity.activity_type %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display activity_id end -->
 

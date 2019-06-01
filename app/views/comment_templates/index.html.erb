@@ -72,13 +72,21 @@
 
         <!-- Display comment.poster_id start -->
         <td>
-          <%= comment.poster.username %>
+          <% if comment.poster.present? %>
+            <a href="/users/<%= comment.poster.id %>">
+              <%= comment.poster.username %>
+            </a>
+          <% end %>
         </td>
         <!-- Display comment.poster_id end -->
 
         <!-- Display comment.activity_id start -->
         <td>
-          <%= comment.activity.activity_type %>
+          <% if comment.activity.present? %>
+            <a href="/activities/<%= comment.activity.id %>">
+              <%= comment.activity.activity_type %>
+            </a>
+          <% end %>
         </td>
         <!-- Display comment.activity_id end -->
 

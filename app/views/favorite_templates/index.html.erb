@@ -58,13 +58,21 @@
 
         <!-- Display favorite.activity_id start -->
         <td>
-          <%= favorite.activity.activity_type %>
+          <% if favorite.activity.present? %>
+            <a href="/activities/<%= favorite.activity.id %>">
+              <%= favorite.activity.activity_type %>
+            </a>
+          <% end %>
         </td>
         <!-- Display favorite.activity_id end -->
 
         <!-- Display favorite.bucket_id start -->
         <td>
-          <%= favorite.bucket.created_at %>
+          <% if favorite.bucket.present? %>
+            <a href="/buckets/<%= favorite.bucket.id %>">
+              <%= favorite.bucket.created_at %>
+            </a>
+          <% end %>
         </td>
         <!-- Display favorite.bucket_id end -->
 

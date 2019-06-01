@@ -34,7 +34,11 @@
       </dt>
       <!-- Display location_id start -->
       <dd>
-        <%= @bucket.location_id %>
+        <% if @bucket.location.present? %>
+          <a href="/locations/<%= @bucket.location_id %>">
+            <%= @bucket.location.city_name %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display location_id end -->
 
@@ -43,7 +47,11 @@
       </dt>
       <!-- Display user_id start -->
       <dd>
-        <%= @bucket.user_id %>
+        <% if @bucket.user.present? %>
+          <a href="/users/<%= @bucket.user_id %>">
+            <%= @bucket.user.username %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display user_id end -->
 
@@ -61,7 +69,11 @@
       </dt>
       <!-- Display photo_id start -->
       <dd>
-        <%= @bucket.photo_id %>
+        <% if @bucket.photo.present? %>
+          <a href="/photos/<%= @bucket.photo_id %>">
+            <%= @bucket.photo.created_at %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display photo_id end -->
 

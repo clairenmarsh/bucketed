@@ -61,7 +61,11 @@
       </dt>
       <!-- Display bucket_id start -->
       <dd>
-        <%= @activity.bucket_id %>
+        <% if @activity.bucket.present? %>
+          <a href="/buckets/<%= @activity.bucket_id %>">
+            <%= @activity.bucket.created_at %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display bucket_id end -->
 
@@ -70,7 +74,11 @@
       </dt>
       <!-- Display photo_id start -->
       <dd>
-        <%= @activity.photo_id %>
+        <% if @activity.photo.present? %>
+          <a href="/photos/<%= @activity.photo_id %>">
+            <%= @activity.photo.created_at %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display photo_id end -->
 
@@ -79,7 +87,11 @@
       </dt>
       <!-- Display location_id start -->
       <dd>
-        <%= @activity.location_id %>
+        <% if @activity.location.present? %>
+          <a href="/locations/<%= @activity.location_id %>">
+            <%= @activity.location.city_name %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display location_id end -->
 

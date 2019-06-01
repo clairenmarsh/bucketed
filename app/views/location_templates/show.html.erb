@@ -72,7 +72,11 @@
       </dt>
       <!-- Display created_by_user_id start -->
       <dd>
-        <%= @location.created_by_user_id %>
+        <% if @location.user.present? %>
+          <a href="/users/<%= @location.created_by_user_id %>">
+            <%= @location.user.username %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display created_by_user_id end -->
 

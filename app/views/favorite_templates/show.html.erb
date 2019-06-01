@@ -34,7 +34,11 @@
       </dt>
       <!-- Display activity_id start -->
       <dd>
-        <%= @favorite.activity_id %>
+        <% if @favorite.activity.present? %>
+          <a href="/activities/<%= @favorite.activity_id %>">
+            <%= @favorite.activity.activity_type %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display activity_id end -->
 
@@ -43,7 +47,11 @@
       </dt>
       <!-- Display bucket_id start -->
       <dd>
-        <%= @favorite.bucket_id %>
+        <% if @favorite.bucket.present? %>
+          <a href="/buckets/<%= @favorite.bucket_id %>">
+            <%= @favorite.bucket.created_at %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display bucket_id end -->
 

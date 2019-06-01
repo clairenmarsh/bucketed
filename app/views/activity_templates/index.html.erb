@@ -96,19 +96,31 @@
 
         <!-- Display activity.bucket_id start -->
         <td>
-          <%= activity.bucket.created_at %>
+          <% if activity.bucket.present? %>
+            <a href="/buckets/<%= activity.bucket.id %>">
+              <%= activity.bucket.created_at %>
+            </a>
+          <% end %>
         </td>
         <!-- Display activity.bucket_id end -->
 
         <!-- Display activity.photo_id start -->
         <td>
-          <%= activity.photo.created_at %>
+          <% if activity.photo.present? %>
+            <a href="/photos/<%= activity.photo.id %>">
+              <%= activity.photo.created_at %>
+            </a>
+          <% end %>
         </td>
         <!-- Display activity.photo_id end -->
 
         <!-- Display activity.location_id start -->
         <td>
-          <%= activity.location.city_name %>
+          <% if activity.location.present? %>
+            <a href="/locations/<%= activity.location.id %>">
+              <%= activity.location.city_name %>
+            </a>
+          <% end %>
         </td>
         <!-- Display activity.location_id end -->
 

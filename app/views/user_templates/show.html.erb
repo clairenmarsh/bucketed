@@ -54,7 +54,11 @@
       </dt>
       <!-- Display photo_id start -->
       <dd>
-        <%= @user.photo_id %>
+        <% if @user.photo.present? %>
+          <a href="/photos/<%= @user.photo_id %>">
+            <%= @user.photo.created_at %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display photo_id end -->
 
@@ -63,7 +67,11 @@
       </dt>
       <!-- Display location_id start -->
       <dd>
-        <%= @user.location_id %>
+        <% if @user.location.present? %>
+          <a href="/locations/<%= @user.location_id %>">
+            <%= @user.location.city_name %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display location_id end -->
 
