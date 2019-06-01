@@ -1,6 +1,7 @@
 class ActivitiesController < ApplicationController
   def index
-    @activities = Activity.page(params[:page]).per(10)
+    @q = Activity.ransack(params[:q])
+    @activities = @q.result(:distinct => true).includes(:bucket, :favorites, :comments, :photo, :location).page(params[:page]).per(10)
 
     render("activity_templates/index.html.erb")
   end

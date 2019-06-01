@@ -1,6 +1,7 @@
 class BucketsController < ApplicationController
   def index
-    @buckets = Bucket.page(params[:page]).per(10)
+    @q = Bucket.ransack(params[:q])
+    @buckets = @q.result(:distinct => true).includes(:user, :activities, :favorites, :photo, :location).page(params[:page]).per(10)
 
     render("bucket_templates/index.html.erb")
   end
