@@ -36,7 +36,7 @@
     </label>
 
     <!-- Input for folowee_user_id start -->
-    <input type="text" id="folowee_user_id" name="folowee_user_id" class="form-control" value="<%= @follower.folowee_user_id %>">
+    <%= select_tag(:folowee_user_id, options_from_collection_for_select(User.all, :id, :username, @follower.folowee_user_id), :class => "form-control") %>
     <!-- Input for folowee_user_id end -->
   </div>
   <!-- Label and input for folowee_user_id end -->
