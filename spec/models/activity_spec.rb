@@ -11,6 +11,8 @@ RSpec.describe Activity, type: :model do
     end
 
     describe "Validations" do
+
+    it { should validate_inclusion_of(:status).in_array([ 'Want to do', 'Done', 'Deleted' ]) }
       
     end
 end

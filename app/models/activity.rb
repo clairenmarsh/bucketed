@@ -5,4 +5,6 @@ class Activity < ApplicationRecord
 
   # Validations
 
+  validates :status, :inclusion => { :in => [ 'Want to do', 'Done', 'Deleted' ]  }
+
 end
