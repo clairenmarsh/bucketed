@@ -1,6 +1,9 @@
 class Location < ApplicationRecord
   # Direct associations
 
+  has_many   :users,
+             :dependent => :destroy
+
   has_many   :lists,
              :class_name => "Bucket",
              :dependent => :destroy

@@ -1,6 +1,8 @@
 class User < ApplicationRecord
   # Direct associations
 
+  belongs_to :location
+
   belongs_to :photo
 
   has_many   :followers2,
