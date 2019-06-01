@@ -1,4 +1,23 @@
 Rails.application.routes.draw do
+  # Routes for the Follower resource:
+
+  # CREATE
+  get("/followers/new", { :controller => "followers", :action => "new_form" })
+  post("/create_follower", { :controller => "followers", :action => "create_row" })
+
+  # READ
+  get("/followers", { :controller => "followers", :action => "index" })
+  get("/followers/:id_to_display", { :controller => "followers", :action => "show" })
+
+  # UPDATE
+  get("/followers/:prefill_with_id/edit", { :controller => "followers", :action => "edit_form" })
+  post("/update_follower/:id_to_modify", { :controller => "followers", :action => "update_row" })
+
+  # DELETE
+  get("/delete_follower/:id_to_remove", { :controller => "followers", :action => "destroy_row" })
+
+  #------------------------------
+
   # Routes for the Comment resource:
 
   # CREATE

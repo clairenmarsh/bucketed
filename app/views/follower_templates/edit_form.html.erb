@@ -1,0 +1,44 @@
+<h1>
+  Edit follower #<%= @follower.id %>
+</h1>
+
+<hr>
+
+<!-- Form follower start -->
+<form action="/update_follower/<%= @follower.id %>" method="post">
+<!-- Form follower end -->
+
+  <!-- Label and input for follower_user_id start -->
+  <div class="form-group">
+    <label for="follower_user_id">
+      Follower user
+    </label>
+
+    <!-- Input for follower_user_id start -->
+    <input type="text" id="follower_user_id" name="follower_user_id" class="form-control" value="<%= @follower.follower_user_id %>">
+    <!-- Input for follower_user_id end -->
+  </div>
+  <!-- Label and input for follower_user_id end -->
+
+  <!-- Label and input for folowee_user_id start -->
+  <div class="form-group">
+    <label for="folowee_user_id">
+      Folowee user
+    </label>
+
+    <!-- Input for folowee_user_id start -->
+    <input type="text" id="folowee_user_id" name="folowee_user_id" class="form-control" value="<%= @follower.folowee_user_id %>">
+    <!-- Input for folowee_user_id end -->
+  </div>
+  <!-- Label and input for folowee_user_id end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Update follower
+  </button>
+</form>
+
+<hr>
+
+<a href="/followers">
+  Go back
+</a>
