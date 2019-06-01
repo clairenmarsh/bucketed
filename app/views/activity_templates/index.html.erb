@@ -1,0 +1,142 @@
+<div class="row mb-3">
+  <div class="col-md-12">
+    <h1>
+      All activities
+    </h1>
+
+    <a href="/activities/new" class="btn btn-block btn-outline-secondary">
+      Add a new activity
+    </a>
+  </div>
+</div>
+
+<!-- Ransack Code start -->
+
+<!-- Ransack Code end -->
+
+<!-- Location Map Code start -->
+
+<!-- Location Map Code end -->
+
+<hr>
+
+<div class="row mb-3">
+  <div class="col-md-12">
+    <table class="table">
+      <tr>
+        <th>
+          ID
+        </th>
+
+        <th>
+          Activity type
+        </th>
+
+        <th>
+          Title
+        </th>
+
+        <th>
+          Yelp link
+        </th>
+
+        <th>
+          Bucket
+        </th>
+
+        <th>
+          Photo
+        </th>
+
+        <th>
+          Location
+        </th>
+
+        <th>
+          Status
+        </th>
+
+        <th>
+          Created at
+        </th>
+
+        <th>
+          Updated at
+        </th>
+
+        <th>
+        </th>
+      </tr>
+
+      <% @activities.each do |activity| %>
+      <tr>
+        <!-- Display activity.id start -->
+        <td>
+          <%= activity.id %>
+        </td>
+        <!-- Display activity.id end -->
+
+        <!-- Display activity.activity_type start -->
+        <td>
+          <%= activity.activity_type %>
+        </td>
+        <!-- Display activity.activity_type end -->
+
+        <!-- Display activity.title start -->
+        <td>
+          <%= activity.title %>
+        </td>
+        <!-- Display activity.title end -->
+
+        <!-- Display activity.yelp_link start -->
+        <td>
+          <%= activity.yelp_link %>
+        </td>
+        <!-- Display activity.yelp_link end -->
+
+        <!-- Display activity.bucket_id start -->
+        <td>
+          <%= activity.bucket_id %>
+        </td>
+        <!-- Display activity.bucket_id end -->
+
+        <!-- Display activity.photo_id start -->
+        <td>
+          <%= activity.photo_id %>
+        </td>
+        <!-- Display activity.photo_id end -->
+
+        <!-- Display activity.location_id start -->
+        <td>
+          <%= activity.location_id %>
+        </td>
+        <!-- Display activity.location_id end -->
+
+        <!-- Display activity.status start -->
+        <td>
+          <%= activity.status %>
+        </td>
+        <!-- Display activity.status end -->
+
+        <!-- Display activity.created_at start -->
+        <td>
+          <%= time_ago_in_words(activity.created_at) %> ago
+        </td>
+        <!-- Display activity.created_at end -->
+
+        <!-- Display activity.updated_at start -->
+        <td>
+          <%= time_ago_in_words(activity.updated_at) %> ago
+        </td>
+        <!-- Display activity.updated_at end -->
+
+        <td>
+          <a href="/activities/<%= activity.id %>">
+            Show details
+          </a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
