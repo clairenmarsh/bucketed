@@ -1,6 +1,9 @@
 class User < ApplicationRecord
   # Direct associations
 
+  has_many   :buckets,
+             :dependent => :destroy
+
   has_many   :locations,
              :foreign_key => "created_by_user_id",
              :dependent => :destroy
