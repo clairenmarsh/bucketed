@@ -63,7 +63,7 @@
     </label>
 
     <!-- Input for created_by_user_id start -->
-    <input type="text" id="created_by_user_id" name="created_by_user_id" class="form-control" value="<%= @location.created_by_user_id %>">
+    <%= select_tag(:created_by_user_id, options_from_collection_for_select(User.all, :id, :username, @location.created_by_user_id), :class => "form-control") %>
     <!-- Input for created_by_user_id end -->
   </div>
   <!-- Label and input for created_by_user_id end -->
