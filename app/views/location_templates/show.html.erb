@@ -1,0 +1,100 @@
+<div class="row mb-3">
+  <div class="col-md-8 offset-md-2">
+    <h1>
+      Location #<%= @location.id %> details
+    </h1>
+
+    <div class="row mb-3">
+      <div class="col">
+        <a href="/locations" class="btn btn-block btn-outline-secondary">
+          Go back
+        </a>
+      </div>
+
+      <!-- Edit link location start -->
+      <div class="col">
+        <a href="/locations/<%= @location.id %>/edit" class="btn btn-block btn-outline-secondary">
+          Edit location
+        </a>
+      </div>
+      <!-- Edit link location end -->
+
+      <!-- Delete link location start -->
+      <div class="col">
+        <a href="/delete_location/<%= @location.id %>" class="btn btn-block btn-outline-secondary">
+          Delete location
+        </a>
+      </div>
+      <!-- Delete link location end -->
+    </div>
+
+    <dl>
+      <dt>
+        City name
+      </dt>
+      <!-- Display city_name start -->
+      <dd>
+        <%= @location.city_name %>
+      </dd>
+      <!-- Display city_name end -->
+
+      <dt>
+        Address
+      </dt>
+      <!-- Display address start -->
+      <dd>
+        <%= @location.address %>
+      </dd>
+      <!-- Display address end -->
+
+      <dt>
+        State name
+      </dt>
+      <!-- Display state_name start -->
+      <dd>
+        <%= @location.state_name %>
+      </dd>
+      <!-- Display state_name end -->
+
+      <dt>
+        Country name
+      </dt>
+      <!-- Display country_name start -->
+      <dd>
+        <%= @location.country_name %>
+      </dd>
+      <!-- Display country_name end -->
+
+      <dt>
+        Created by user
+      </dt>
+      <!-- Display created_by_user_id start -->
+      <dd>
+        <%= @location.created_by_user_id %>
+      </dd>
+      <!-- Display created_by_user_id end -->
+
+      <dt>
+        Created at
+      </dt>
+      <!-- Display created_at start -->
+      <dd>
+        <%= time_ago_in_words(@location.created_at) %> ago
+      </dd>
+      <!-- Display created_at end -->
+
+      <dt>
+        Updated at
+      </dt>
+      <!-- Display updated_at start -->
+      <dd>
+        <%= time_ago_in_words(@location.updated_at) %> ago
+      </dd>
+      <!-- Display updated_at end -->
+    </dl>
+  </div>
+</div>
+
+<!-- Show Page Customization starts -->
+
+<!-- Show Page Customization end -->
