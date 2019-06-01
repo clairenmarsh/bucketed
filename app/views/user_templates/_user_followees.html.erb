@@ -1,14 +1,14 @@
 <div class="card">
   <div class="card-header d-flex align-items-center justify-content-between">
-    Followers2
+    Followees
 
-    <a data-toggle="collapse" href="#user_followers2_new_form">
+    <a data-toggle="collapse" href="#user_followees_new_form">
       Add follower
     </a>
   </div>
 
   <ul class="list-group list-group-flush">
-    <% @user.followers2.each do |follower| %>
+    <% @user.followees.each do |follower| %>
       <li class="list-group-item d-flex align-items-center justify-content-between">
         <a href="/followers/<%= follower.id %>">
           <%= follower.follower_user_id %>

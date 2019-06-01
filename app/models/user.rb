@@ -5,7 +5,7 @@ class User < ApplicationRecord
 
   belongs_to :photo
 
-  has_many   :followers2,
+  has_many   :followees,
              :class_name => "Follower",
              :foreign_key => "folowee_user_id",
              :dependent => :destroy

@@ -24,6 +24,8 @@ RSpec.describe Activity, type: :model do
 
     it { should validate_inclusion_of(:activity_type).in_array([ 'Eat', 'Drink', 'Play' ]) }
 
+    it { should validate_inclusion_of(:priority).in_array([ 'High', 'Medium', 'Low' ]) }
+
     it { should validate_inclusion_of(:status).in_array([ 'Want to do', 'Done', 'Deleted' ]) }
       
     end
