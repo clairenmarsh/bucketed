@@ -23,7 +23,7 @@ class PhotosController < ApplicationController
   def create_row
     @photo = Photo.new
 
-    @photo.image_url = params.fetch("image_url")
+    @photo.image_url = params.fetch("image_url") if params.key?("image_url")
 
     if @photo.valid?
       @photo.save
@@ -43,7 +43,7 @@ class PhotosController < ApplicationController
   def update_row
     @photo = Photo.find(params.fetch("id_to_modify"))
 
-    @photo.image_url = params.fetch("image_url")
+    @photo.image_url = params.fetch("image_url") if params.key?("image_url")
 
     if @photo.valid?
       @photo.save

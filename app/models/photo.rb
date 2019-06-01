@@ -1,4 +1,6 @@
 class Photo < ApplicationRecord
+  mount_uploader :image_url, ImageUrlUploader
+
   # Direct associations
 
   has_many   :activities,
