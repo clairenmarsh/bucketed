@@ -1,6 +1,10 @@
 class User < ApplicationRecord
   # Direct associations
 
+  has_many   :locations,
+             :foreign_key => "created_by_user_id",
+             :dependent => :destroy
+
   # Indirect associations
 
   # Validations
