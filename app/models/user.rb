@@ -1,6 +1,8 @@
 class User < ApplicationRecord
   # Direct associations
 
+  belongs_to :photo
+
   has_many   :followers2,
              :class_name => "Follower",
              :foreign_key => "folowee_user_id",
