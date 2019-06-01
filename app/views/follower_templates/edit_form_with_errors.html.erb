@@ -24,7 +24,7 @@
     </label>
 
     <!-- Input for follower_user_id start -->
-    <input type="text" id="follower_user_id" name="follower_user_id" class="form-control" value="<%= @follower.follower_user_id %>">
+    <%= select_tag(:follower_user_id, options_from_collection_for_select(User.all, :id, :username, @follower.follower_user_id), :class => "form-control") %>
     <!-- Input for follower_user_id end -->
   </div>
   <!-- Label and input for follower_user_id end -->
