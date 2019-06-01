@@ -1,0 +1,69 @@
+<h1>
+  Add a new comment
+</h1>
+
+
+<hr>
+
+<!-- Form comment start -->
+<form action="/create_comment" method="post">
+<!-- Form comment end -->
+
+  <!-- Label and input for body start -->
+  <div class="form-group">
+    <label for="body">
+      Body
+    </label>
+
+    <!-- Input for body start -->
+    <input type="text" id="body" name="body" class="form-control">
+    <!-- Input for body end -->
+  </div>
+  <!-- Label and input for body end -->
+
+  <!-- Label and input for poster_id start -->
+  <div class="form-group">
+    <label for="poster_id">
+      Poster
+    </label>
+
+    <!-- Input for poster_id start -->
+    <input type="text" id="poster_id" name="poster_id" class="form-control">
+    <!-- Input for poster_id end -->
+  </div>
+  <!-- Label and input for poster_id end -->
+
+  <!-- Label and input for activity_id start -->
+  <div class="form-group">
+    <label for="activity_id">
+      Activity
+    </label>
+
+    <!-- Input for activity_id start -->
+    <input type="text" id="activity_id" name="activity_id" class="form-control">
+    <!-- Input for activity_id end -->
+  </div>
+  <!-- Label and input for activity_id end -->
+
+  <!-- Label and input for bucket_id start -->
+  <div class="form-group">
+    <label for="bucket_id">
+      Bucket
+    </label>
+
+    <!-- Input for bucket_id start -->
+    <input type="text" id="bucket_id" name="bucket_id" class="form-control">
+    <!-- Input for bucket_id end -->
+  </div>
+  <!-- Label and input for bucket_id end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Create comment
+  </button>
+</form>
+
+<hr>
+
+<a href="/comments">
+  Go back
+</a>
