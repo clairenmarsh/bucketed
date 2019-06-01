@@ -1,6 +1,9 @@
 class Location < ApplicationRecord
   # Direct associations
 
+  has_many   :activities,
+             :dependent => :destroy
+
   has_many   :users,
              :dependent => :destroy
 
