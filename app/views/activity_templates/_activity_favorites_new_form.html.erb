@@ -14,7 +14,7 @@
     </label>
 
     <!-- Input for bucket_id start -->
-    <input type="text" id="bucket_id" name="bucket_id" class="form-control" value="<%= @favorite.bucket_id %>">
+    <%= select_tag(:bucket_id, options_from_collection_for_select(Bucket.all, :id, :created_at, @favorite.bucket_id), :class => "form-control") %>
     <!-- Input for bucket_id end -->
   </div>
   <!-- Label and input for bucket_id end -->
