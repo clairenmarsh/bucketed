@@ -1,6 +1,8 @@
 class Bucket < ApplicationRecord
   # Direct associations
 
+  belongs_to :photo
+
   has_many   :favorites,
              :dependent => :destroy
 
