@@ -18,6 +18,8 @@ Rails.application.routes.draw do
 
   # DELETE
   get("/delete_follower/:id_to_remove", { :controller => "followers", :action => "destroy_row" })
+  get("/delete_follower_from_folowee_user/:id_to_remove", { :controller => "followers", :action => "destroy_row_from_folowee_user" })
+  get("/delete_follower_from_follower_user/:id_to_remove", { :controller => "followers", :action => "destroy_row_from_follower_user" })
 
   #------------------------------
 
@@ -37,6 +39,8 @@ Rails.application.routes.draw do
 
   # DELETE
   get("/delete_comment/:id_to_remove", { :controller => "comments", :action => "destroy_row" })
+  get("/delete_comment_from_activity/:id_to_remove", { :controller => "comments", :action => "destroy_row_from_activity" })
+  get("/delete_comment_from_poster/:id_to_remove", { :controller => "comments", :action => "destroy_row_from_poster" })
 
   #------------------------------
 
@@ -56,6 +60,8 @@ Rails.application.routes.draw do
 
   # DELETE
   get("/delete_favorite/:id_to_remove", { :controller => "favorites", :action => "destroy_row" })
+  get("/delete_favorite_from_activity/:id_to_remove", { :controller => "favorites", :action => "destroy_row_from_activity" })
+  get("/delete_favorite_from_bucket/:id_to_remove", { :controller => "favorites", :action => "destroy_row_from_bucket" })
 
   #------------------------------
 
@@ -75,6 +81,7 @@ Rails.application.routes.draw do
 
   # DELETE
   get("/delete_location/:id_to_remove", { :controller => "locations", :action => "destroy_row" })
+  get("/delete_location_from_user/:id_to_remove", { :controller => "locations", :action => "destroy_row_from_user" })
 
   #------------------------------
 
@@ -113,6 +120,9 @@ Rails.application.routes.draw do
 
   # DELETE
   get("/delete_activity/:id_to_remove", { :controller => "activities", :action => "destroy_row" })
+  get("/delete_activity_from_location/:id_to_remove", { :controller => "activities", :action => "destroy_row_from_location" })
+  get("/delete_activity_from_photo/:id_to_remove", { :controller => "activities", :action => "destroy_row_from_photo" })
+  get("/delete_activity_from_bucket/:id_to_remove", { :controller => "activities", :action => "destroy_row_from_bucket" })
 
   #------------------------------
 
@@ -132,6 +142,9 @@ Rails.application.routes.draw do
 
   # DELETE
   get("/delete_bucket/:id_to_remove", { :controller => "buckets", :action => "destroy_row" })
+  get("/delete_bucket_from_location/:id_to_remove", { :controller => "buckets", :action => "destroy_row_from_location" })
+  get("/delete_bucket_from_photo/:id_to_remove", { :controller => "buckets", :action => "destroy_row_from_photo" })
+  get("/delete_bucket_from_user/:id_to_remove", { :controller => "buckets", :action => "destroy_row_from_user" })
 
   #------------------------------
 

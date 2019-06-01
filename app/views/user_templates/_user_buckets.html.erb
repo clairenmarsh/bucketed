@@ -1,0 +1,23 @@
+<div class="card">
+  <div class="card-header d-flex align-items-center justify-content-between">
+    Buckets
+
+    <a data-toggle="collapse" href="#user_buckets_new_form">
+      Add bucket
+    </a>
+  </div>
+
+  <ul class="list-group list-group-flush">
+    <% @user.buckets.each do |bucket| %>
+      <li class="list-group-item d-flex align-items-center justify-content-between">
+        <!-- Show link start -->
+        <a href="/buckets/<%= bucket.id %>">
+          <%= bucket.created_at %>
+        </a>
+        <!-- Show link end -->
+
+      </li>
+    <% end %>
+
+  </ul>
+</div>

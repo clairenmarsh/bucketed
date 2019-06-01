@@ -57,6 +57,30 @@ class BucketsController < ApplicationController
     end
   end
 
+  def destroy_row_from_user
+    @bucket = Bucket.find(params.fetch("id_to_remove"))
+
+    @bucket.destroy
+
+    redirect_to("/users/#{@bucket.user_id}", notice: "Bucket deleted successfully.")
+  end
+
+  def destroy_row_from_photo
+    @bucket = Bucket.find(params.fetch("id_to_remove"))
+
+    @bucket.destroy
+
+    redirect_to("/photos/#{@bucket.photo_id}", notice: "Bucket deleted successfully.")
+  end
+
+  def destroy_row_from_location
+    @bucket = Bucket.find(params.fetch("id_to_remove"))
+
+    @bucket.destroy
+
+    redirect_to("/locations/#{@bucket.location_id}", notice: "Bucket deleted successfully.")
+  end
+
   def destroy_row
     @bucket = Bucket.find(params.fetch("id_to_remove"))
 

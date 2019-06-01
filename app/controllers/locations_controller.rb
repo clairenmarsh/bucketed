@@ -59,6 +59,14 @@ class LocationsController < ApplicationController
     end
   end
 
+  def destroy_row_from_user
+    @location = Location.find(params.fetch("id_to_remove"))
+
+    @location.destroy
+
+    redirect_to("/users/#{@location.created_by_user_id}", notice: "Location deleted successfully.")
+  end
+
   def destroy_row
     @location = Location.find(params.fetch("id_to_remove"))
 

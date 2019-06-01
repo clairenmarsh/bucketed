@@ -63,6 +63,30 @@ class ActivitiesController < ApplicationController
     end
   end
 
+  def destroy_row_from_bucket
+    @activity = Activity.find(params.fetch("id_to_remove"))
+
+    @activity.destroy
+
+    redirect_to("/buckets/#{@activity.bucket_id}", notice: "Activity deleted successfully.")
+  end
+
+  def destroy_row_from_photo
+    @activity = Activity.find(params.fetch("id_to_remove"))
+
+    @activity.destroy
+
+    redirect_to("/photos/#{@activity.photo_id}", notice: "Activity deleted successfully.")
+  end
+
+  def destroy_row_from_location
+    @activity = Activity.find(params.fetch("id_to_remove"))
+
+    @activity.destroy
+
+    redirect_to("/locations/#{@activity.location_id}", notice: "Activity deleted successfully.")
+  end
+
   def destroy_row
     @activity = Activity.find(params.fetch("id_to_remove"))
 

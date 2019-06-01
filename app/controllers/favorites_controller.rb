@@ -53,6 +53,22 @@ class FavoritesController < ApplicationController
     end
   end
 
+  def destroy_row_from_bucket
+    @favorite = Favorite.find(params.fetch("id_to_remove"))
+
+    @favorite.destroy
+
+    redirect_to("/buckets/#{@favorite.bucket_id}", notice: "Favorite deleted successfully.")
+  end
+
+  def destroy_row_from_activity
+    @favorite = Favorite.find(params.fetch("id_to_remove"))
+
+    @favorite.destroy
+
+    redirect_to("/activities/#{@favorite.activity_id}", notice: "Favorite deleted successfully.")
+  end
+
   def destroy_row
     @favorite = Favorite.find(params.fetch("id_to_remove"))
 
