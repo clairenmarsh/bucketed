@@ -11,13 +11,11 @@
         </a>
       </div>
 
-      <!-- Edit link user start -->
       <div class="col">
         <a href="/users/<%= @user.id %>/edit" class="btn btn-block btn-outline-secondary">
           Edit user
         </a>
       </div>
-      <!-- Edit link user end -->
 
     </div>
 
@@ -25,34 +23,27 @@
       <dt>
         Username
       </dt>
-      <!-- Display username start -->
       <dd>
         <%= @user.username %>
       </dd>
-      <!-- Display username end -->
 
       <dt>
         Email
       </dt>
-      <!-- Display email start -->
       <dd>
         <%= @user.email %>
       </dd>
-      <!-- Display email end -->
 
       <dt>
         Password
       </dt>
-      <!-- Display password start -->
       <dd>
         <%= @user.password %>
       </dd>
-      <!-- Display password end -->
 
       <dt>
         Photo
       </dt>
-      <!-- Display photo_id start -->
       <dd>
         <% if @user.photo.present? %>
           <a href="/photos/<%= @user.photo_id %>">
@@ -60,12 +51,10 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display photo_id end -->
 
       <dt>
         Location
       </dt>
-      <!-- Display location_id start -->
       <dd>
         <% if @user.location.present? %>
           <a href="/locations/<%= @user.location_id %>">
@@ -73,30 +62,24 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display location_id end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@user.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@user.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
 <div class="row mb-3">
   <div class="col-md-8 offset-md-2">
     <%= render partial: "user_templates/user_locations" %>
@@ -126,4 +109,3 @@
     <%= render partial: "user_templates/user_followers2" %>
   </div>
 </div>
-<!-- Show Page Customization end -->

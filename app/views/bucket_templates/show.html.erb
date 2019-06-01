@@ -11,28 +11,23 @@
         </a>
       </div>
 
-      <!-- Edit link bucket start -->
       <div class="col">
         <a href="/buckets/<%= @bucket.id %>/edit" class="btn btn-block btn-outline-secondary">
           Edit bucket
         </a>
       </div>
-      <!-- Edit link bucket end -->
 
-      <!-- Delete link bucket start -->
       <div class="col">
         <a href="/delete_bucket/<%= @bucket.id %>" class="btn btn-block btn-outline-secondary">
           Delete bucket
         </a>
       </div>
-      <!-- Delete link bucket end -->
     </div>
 
     <dl>
       <dt>
         Location
       </dt>
-      <!-- Display location_id start -->
       <dd>
         <% if @bucket.location.present? %>
           <a href="/locations/<%= @bucket.location_id %>">
@@ -40,12 +35,10 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display location_id end -->
 
       <dt>
         User
       </dt>
-      <!-- Display user_id start -->
       <dd>
         <% if @bucket.user.present? %>
           <a href="/users/<%= @bucket.user_id %>">
@@ -53,21 +46,17 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display user_id end -->
 
       <dt>
         Bucket name
       </dt>
-      <!-- Display bucket_name start -->
       <dd>
         <%= @bucket.bucket_name %>
       </dd>
-      <!-- Display bucket_name end -->
 
       <dt>
         Photo
       </dt>
-      <!-- Display photo_id start -->
       <dd>
         <% if @bucket.photo.present? %>
           <a href="/photos/<%= @bucket.photo_id %>">
@@ -75,30 +64,24 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display photo_id end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@bucket.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@bucket.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
 <div class="row mb-3">
   <div class="col-md-8 offset-md-2">
     <%= render partial: "bucket_templates/bucket_activities" %>
@@ -110,4 +93,3 @@
     <%= render partial: "bucket_templates/bucket_favorites" %>
   </div>
 </div>
-<!-- Show Page Customization end -->

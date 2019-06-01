@@ -5,69 +5,47 @@
 
 <hr>
 
-<!-- Form location start -->
 <form action="/create_location" method="post">
-<!-- Form location end -->
 
-  <!-- Label and input for city_name start -->
   <div class="form-group">
     <label for="city_name">
       City name
     </label>
 
-    <!-- Input for city_name start -->
     <input type="text" id="city_name" name="city_name" class="form-control">
-    <!-- Input for city_name end -->
   </div>
-  <!-- Label and input for city_name end -->
 
-  <!-- Label and input for address start -->
   <div class="form-group">
     <label for="address">
       Address
     </label>
 
-    <!-- Input for address start -->
     <input type="text" id="address" name="address" class="form-control">
-    <!-- Input for address end -->
   </div>
-  <!-- Label and input for address end -->
 
-  <!-- Label and input for state_name start -->
   <div class="form-group">
     <label for="state_name">
       State name
     </label>
 
-    <!-- Input for state_name start -->
     <input type="text" id="state_name" name="state_name" class="form-control">
-    <!-- Input for state_name end -->
   </div>
-  <!-- Label and input for state_name end -->
 
-  <!-- Label and input for country_name start -->
   <div class="form-group">
     <label for="country_name">
       Country name
     </label>
 
-    <!-- Input for country_name start -->
     <input type="text" id="country_name" name="country_name" class="form-control">
-    <!-- Input for country_name end -->
   </div>
-  <!-- Label and input for country_name end -->
 
-  <!-- Label and input for created_by_user_id start -->
   <div class="form-group">
     <label for="created_by_user_id">
       Created by user
     </label>
 
-    <!-- Input for created_by_user_id start -->
     <%= select_tag(:created_by_user_id, options_from_collection_for_select(User.all, :id, :username, @location.created_by_user_id), :class => "form-control") %>
-    <!-- Input for created_by_user_id end -->
   </div>
-  <!-- Label and input for created_by_user_id end -->
 
   <button class="btn btn-block btn-outline-secondary">
     Create location

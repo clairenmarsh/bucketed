@@ -11,28 +11,23 @@
         </a>
       </div>
 
-      <!-- Edit link follower start -->
       <div class="col">
         <a href="/followers/<%= @follower.id %>/edit" class="btn btn-block btn-outline-secondary">
           Edit follower
         </a>
       </div>
-      <!-- Edit link follower end -->
 
-      <!-- Delete link follower start -->
       <div class="col">
         <a href="/delete_follower/<%= @follower.id %>" class="btn btn-block btn-outline-secondary">
           Delete follower
         </a>
       </div>
-      <!-- Delete link follower end -->
     </div>
 
     <dl>
       <dt>
         Follower user
       </dt>
-      <!-- Display follower_user_id start -->
       <dd>
         <% if @follower.follower_user.present? %>
           <a href="/users/<%= @follower.follower_user_id %>">
@@ -40,12 +35,10 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display follower_user_id end -->
 
       <dt>
         Folowee user
       </dt>
-      <!-- Display folowee_user_id start -->
       <dd>
         <% if @follower.folowee_user.present? %>
           <a href="/users/<%= @follower.folowee_user_id %>">
@@ -53,28 +46,21 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display folowee_user_id end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@follower.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@follower.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
-<!-- Show Page Customization end -->

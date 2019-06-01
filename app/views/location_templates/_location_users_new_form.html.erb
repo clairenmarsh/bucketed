@@ -1,59 +1,38 @@
-<!-- Form user start -->
 <form action="/create_user_from_location" method="post">
-<!-- Form user end -->
 
-  <!-- Label and input for username start -->
   <div class="form-group">
     <label for="username">
       Username
     </label>
 
-    <!-- Input for username start -->
     <input type="text" id="username" name="username" class="form-control" value="<%= @user.username %>">
-    <!-- Input for username end -->
   </div>
-  <!-- Label and input for username end -->
 
-  <!-- Label and input for email start -->
   <div class="form-group">
     <label for="email">
       Email
     </label>
 
-    <!-- Input for email start -->
     <input type="text" id="email" name="email" class="form-control" value="<%= @user.email %>">
-    <!-- Input for email end -->
   </div>
-  <!-- Label and input for email end -->
 
-  <!-- Label and input for password start -->
   <div class="form-group">
     <label for="password">
       Password
     </label>
 
-    <!-- Input for password start -->
     <input type="text" id="password" name="password" class="form-control" value="<%= @user.password %>">
-    <!-- Input for password end -->
   </div>
-  <!-- Label and input for password end -->
 
-  <!-- Label and input for photo_id start -->
   <div class="form-group">
     <label for="photo_id">
       Photo
     </label>
 
-    <!-- Input for photo_id start -->
     <%= select_tag(:photo_id, options_from_collection_for_select(Photo.all, :id, :created_at, @user.photo_id), :class => "form-control") %>
-    <!-- Input for photo_id end -->
   </div>
-  <!-- Label and input for photo_id end -->
 
-  <!-- Label and input for location_id start -->
-  <!-- Input for location_id start -->
   <input type="hidden" name="location_id" value="<%= @location.id %>">
-  <!-- Input for location_id end -->
 
   <button class="btn btn-block btn-outline-secondary">
     Create user

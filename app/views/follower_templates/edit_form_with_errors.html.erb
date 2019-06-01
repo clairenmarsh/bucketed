@@ -1,4 +1,3 @@
-<!-- Validation failure messages -->
 <% if @follower.errors.any? %>
   <% @follower.errors.full_messages.each do |message| %>
     <div class="alert">
@@ -13,33 +12,23 @@
 
 <hr>
 
-<!-- Form follower start -->
 <form action="/update_follower/<%= @follower.id %>" method="post">
-<!-- Form follower end -->
 
-  <!-- Label and input for follower_user_id start -->
   <div class="form-group">
     <label for="follower_user_id">
       Follower user
     </label>
 
-    <!-- Input for follower_user_id start -->
     <%= select_tag(:follower_user_id, options_from_collection_for_select(User.all, :id, :username, @follower.follower_user_id), :class => "form-control") %>
-    <!-- Input for follower_user_id end -->
   </div>
-  <!-- Label and input for follower_user_id end -->
 
-  <!-- Label and input for folowee_user_id start -->
   <div class="form-group">
     <label for="folowee_user_id">
       Folowee user
     </label>
 
-    <!-- Input for folowee_user_id start -->
     <%= select_tag(:folowee_user_id, options_from_collection_for_select(User.all, :id, :username, @follower.folowee_user_id), :class => "form-control") %>
-    <!-- Input for folowee_user_id end -->
   </div>
-  <!-- Label and input for folowee_user_id end -->
 
   <button class="btn btn-block btn-outline-secondary">
     Update follower

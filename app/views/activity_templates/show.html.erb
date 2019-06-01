@@ -11,55 +11,44 @@
         </a>
       </div>
 
-      <!-- Edit link activity start -->
       <div class="col">
         <a href="/activities/<%= @activity.id %>/edit" class="btn btn-block btn-outline-secondary">
           Edit activity
         </a>
       </div>
-      <!-- Edit link activity end -->
 
-      <!-- Delete link activity start -->
       <div class="col">
         <a href="/delete_activity/<%= @activity.id %>" class="btn btn-block btn-outline-secondary">
           Delete activity
         </a>
       </div>
-      <!-- Delete link activity end -->
     </div>
 
     <dl>
       <dt>
         Activity type
       </dt>
-      <!-- Display activity_type start -->
       <dd>
         <%= @activity.activity_type %>
       </dd>
-      <!-- Display activity_type end -->
 
       <dt>
         Title
       </dt>
-      <!-- Display title start -->
       <dd>
         <%= @activity.title %>
       </dd>
-      <!-- Display title end -->
 
       <dt>
         Yelp link
       </dt>
-      <!-- Display yelp_link start -->
       <dd>
         <%= @activity.yelp_link %>
       </dd>
-      <!-- Display yelp_link end -->
 
       <dt>
         Bucket
       </dt>
-      <!-- Display bucket_id start -->
       <dd>
         <% if @activity.bucket.present? %>
           <a href="/buckets/<%= @activity.bucket_id %>">
@@ -67,12 +56,10 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display bucket_id end -->
 
       <dt>
         Photo
       </dt>
-      <!-- Display photo_id start -->
       <dd>
         <% if @activity.photo.present? %>
           <a href="/photos/<%= @activity.photo_id %>">
@@ -80,12 +67,10 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display photo_id end -->
 
       <dt>
         Location
       </dt>
-      <!-- Display location_id start -->
       <dd>
         <% if @activity.location.present? %>
           <a href="/locations/<%= @activity.location_id %>">
@@ -93,39 +78,31 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display location_id end -->
 
       <dt>
         Status
       </dt>
-      <!-- Display status start -->
       <dd>
         <%= @activity.status %>
       </dd>
-      <!-- Display status end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@activity.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@activity.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
 <div class="row mb-3">
   <div class="col-md-8 offset-md-2">
     <%= render partial: "activity_templates/activity_favorites" %>
@@ -137,4 +114,3 @@
     <%= render partial: "activity_templates/activity_comments" %>
   </div>
 </div>
-<!-- Show Page Customization end -->

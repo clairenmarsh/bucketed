@@ -1,23 +1,14 @@
-<!-- Form favorite start -->
 <form action="/create_favorite_from_bucket" method="post">
-<!-- Form favorite end -->
 
-  <!-- Label and input for activity_id start -->
   <div class="form-group">
     <label for="activity_id">
       Activity
     </label>
 
-    <!-- Input for activity_id start -->
     <%= select_tag(:activity_id, options_from_collection_for_select(Activity.all, :id, :activity_type, @favorite.activity_id), :class => "form-control") %>
-    <!-- Input for activity_id end -->
   </div>
-  <!-- Label and input for activity_id end -->
 
-  <!-- Label and input for bucket_id start -->
-  <!-- Input for bucket_id start -->
   <input type="hidden" name="bucket_id" value="<%= @bucket.id %>">
-  <!-- Input for bucket_id end -->
 
   <button class="btn btn-block btn-outline-secondary">
     Create favorite
