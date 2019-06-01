@@ -28,6 +28,7 @@ Rails.application.routes.draw do
   # CREATE
   get("/comments/new", { :controller => "comments", :action => "new_form" })
   post("/create_comment", { :controller => "comments", :action => "create_row" })
+  post("/create_comment_from_activity", { :controller => "comments", :action => "create_row_from_activity" })
 
   # READ
   get("/comments", { :controller => "comments", :action => "index" })
@@ -49,6 +50,8 @@ Rails.application.routes.draw do
   # CREATE
   get("/favorites/new", { :controller => "favorites", :action => "new_form" })
   post("/create_favorite", { :controller => "favorites", :action => "create_row" })
+  post("/create_favorite_from_activity", { :controller => "favorites", :action => "create_row_from_activity" })
+  post("/create_favorite_from_bucket", { :controller => "favorites", :action => "create_row_from_bucket" })
 
   # READ
   get("/favorites", { :controller => "favorites", :action => "index" })
@@ -109,6 +112,9 @@ Rails.application.routes.draw do
   # CREATE
   get("/activities/new", { :controller => "activities", :action => "new_form" })
   post("/create_activity", { :controller => "activities", :action => "create_row" })
+  post("/create_activity_from_location", { :controller => "activities", :action => "create_row_from_location" })
+  post("/create_activity_from_photo", { :controller => "activities", :action => "create_row_from_photo" })
+  post("/create_activity_from_bucket", { :controller => "activities", :action => "create_row_from_bucket" })
 
   # READ
   get("/activities", { :controller => "activities", :action => "index" })
@@ -131,6 +137,8 @@ Rails.application.routes.draw do
   # CREATE
   get("/buckets/new", { :controller => "buckets", :action => "new_form" })
   post("/create_bucket", { :controller => "buckets", :action => "create_row" })
+  post("/create_bucket_from_location", { :controller => "buckets", :action => "create_row_from_location" })
+  post("/create_bucket_from_photo", { :controller => "buckets", :action => "create_row_from_photo" })
 
   # READ
   get("/buckets", { :controller => "buckets", :action => "index" })

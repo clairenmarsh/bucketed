@@ -1,0 +1,85 @@
+<!-- Form activity start -->
+<form action="/create_activity_from_bucket" method="post">
+<!-- Form activity end -->
+
+  <!-- Label and input for activity_type start -->
+  <div class="form-group">
+    <label for="activity_type">
+      Activity type
+    </label>
+
+    <!-- Input for activity_type start -->
+    <input type="text" id="activity_type" name="activity_type" class="form-control" value="<%= @activity.activity_type %>">
+    <!-- Input for activity_type end -->
+  </div>
+  <!-- Label and input for activity_type end -->
+
+  <!-- Label and input for title start -->
+  <div class="form-group">
+    <label for="title">
+      Title
+    </label>
+
+    <!-- Input for title start -->
+    <input type="text" id="title" name="title" class="form-control" value="<%= @activity.title %>">
+    <!-- Input for title end -->
+  </div>
+  <!-- Label and input for title end -->
+
+  <!-- Label and input for yelp_link start -->
+  <div class="form-group">
+    <label for="yelp_link">
+      Yelp link
+    </label>
+
+    <!-- Input for yelp_link start -->
+    <input type="text" id="yelp_link" name="yelp_link" class="form-control" value="<%= @activity.yelp_link %>">
+    <!-- Input for yelp_link end -->
+  </div>
+  <!-- Label and input for yelp_link end -->
+
+  <!-- Label and input for bucket_id start -->
+  <!-- Input for bucket_id start -->
+  <input type="hidden" name="bucket_id" value="<%= @bucket.id %>">
+  <!-- Input for bucket_id end -->
+
+  <!-- Label and input for photo_id start -->
+  <div class="form-group">
+    <label for="photo_id">
+      Photo
+    </label>
+
+    <!-- Input for photo_id start -->
+    <input type="text" id="photo_id" name="photo_id" class="form-control" value="<%= @activity.photo_id %>">
+    <!-- Input for photo_id end -->
+  </div>
+  <!-- Label and input for photo_id end -->
+
+  <!-- Label and input for location_id start -->
+  <div class="form-group">
+    <label for="location_id">
+      Location
+    </label>
+
+    <!-- Input for location_id start -->
+    <input type="text" id="location_id" name="location_id" class="form-control" value="<%= @activity.location_id %>">
+    <!-- Input for location_id end -->
+  </div>
+  <!-- Label and input for location_id end -->
+
+  <!-- Label and input for status start -->
+  <div class="form-group">
+    <label for="status">
+      Status
+    </label>
+
+    <!-- Input for status start -->
+    <input type="text" id="status" name="status" class="form-control" value="<%= @activity.status %>">
+    <!-- Input for status end -->
+  </div>
+  <!-- Label and input for status end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Create activity
+  </button>
+</form>

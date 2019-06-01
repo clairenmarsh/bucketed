@@ -1,0 +1,49 @@
+<!-- Form bucket start -->
+<form action="/create_bucket_from_location" method="post">
+<!-- Form bucket end -->
+
+  <!-- Label and input for location_id start -->
+  <!-- Input for location_id start -->
+  <input type="hidden" name="location_id" value="<%= @location.id %>">
+  <!-- Input for location_id end -->
+
+  <!-- Label and input for user_id start -->
+  <div class="form-group">
+    <label for="user_id">
+      User
+    </label>
+
+    <!-- Input for user_id start -->
+    <input type="text" id="user_id" name="user_id" class="form-control" value="<%= @bucket.user_id %>">
+    <!-- Input for user_id end -->
+  </div>
+  <!-- Label and input for user_id end -->
+
+  <!-- Label and input for bucket_name start -->
+  <div class="form-group">
+    <label for="bucket_name">
+      Bucket name
+    </label>
+
+    <!-- Input for bucket_name start -->
+    <input type="text" id="bucket_name" name="bucket_name" class="form-control" value="<%= @bucket.bucket_name %>">
+    <!-- Input for bucket_name end -->
+  </div>
+  <!-- Label and input for bucket_name end -->
+
+  <!-- Label and input for photo_id start -->
+  <div class="form-group">
+    <label for="photo_id">
+      Photo
+    </label>
+
+    <!-- Input for photo_id start -->
+    <input type="text" id="photo_id" name="photo_id" class="form-control" value="<%= @bucket.photo_id %>">
+    <!-- Input for photo_id end -->
+  </div>
+  <!-- Label and input for photo_id end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Create bucket
+  </button>
+</form>

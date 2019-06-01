@@ -6,6 +6,9 @@ class PhotosController < ApplicationController
   end
 
   def show
+    @activity = Activity.new
+    @user = User.new
+    @bucket = Bucket.new
     @photo = Photo.find(params.fetch("id_to_display"))
 
     render("photo_templates/show.html.erb")

@@ -32,6 +32,36 @@ class FavoritesController < ApplicationController
     end
   end
 
+  def create_row_from_bucket
+    @favorite = Favorite.new
+
+    @favorite.activity_id = params.fetch("activity_id")
+    @favorite.bucket_id = params.fetch("bucket_id")
+
+    if @favorite.valid?
+      @favorite.save
+
+      redirect_to("/buckets/#{@favorite.bucket_id}", notice: "Favorite created successfully.")
+    else
+      render("favorite_templates/new_form_with_errors.html.erb")
+    end
+  end
+
+  def create_row_from_activity
+    @favorite = Favorite.new
+
+    @favorite.activity_id = params.fetch("activity_id")
+    @favorite.bucket_id = params.fetch("bucket_id")
+
+    if @favorite.valid?
+      @favorite.save
+
+      redirect_to("/activities/#{@favorite.activity_id}", notice: "Favorite created successfully.")
+    else
+      render("favorite_templates/new_form_with_errors.html.erb")
+    end
+  end
+
   def edit_form
     @favorite = Favorite.find(params.fetch("prefill_with_id"))
 
